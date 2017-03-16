@@ -1,0 +1,177 @@
+// *************************************
+// ========== JSON TEST CASES ==========
+// *************************************
+
+// COPY THE FOLLOWING JSON OBJECTS FOR TESTING
+
+// PRODUCT RECOMMENDATION
+{
+  "intents": {
+    "intent": "product_recommendation"
+  },
+
+  "viewAllurl": {
+    "url": ""
+  },
+
+  "products": [
+    {
+      "id": "809530",
+      "productInfo": {
+        "longDescription": "- Black textured-leather (Calf)\r\n- Snap-fastening front flap\r\n- Comes with dust bag\r\n- Weighs approximately 2.4lbs/ 1.1kg\r\n- Made in Italy",
+        "name": "Sicily medium textured-leather tote",
+        "sizeFit": "- <b>This item's measurements are:</b>",
+        "visible": true,
+        "price": {
+          "currency": "GBP",
+          "divisor": 100,
+          "amount": 115000
+        },
+        "onSale": false,
+        "brand": {
+          "id": 449,
+          "name": "Dolce & Gabbana",
+          "urlKey": "Dolce_and_Gabbana"
+        },
+        "analyticsKey": "Sicily medium textured-leather tote",
+        "centralSizeScheme": "Unsized",
+        "id": 809530,
+        "skus": [
+          {
+            "stockLevel": "In_Stock",
+            "measurements": [
+              {
+                "id": 4,
+                "name": "Depth",
+                "value": 11
+              },
+              {
+                "id": 17,
+                "name": "Handle Drop",
+                "value": 9
+              },
+              {
+                "id": 2,
+                "name": "Height",
+                "value": 24
+              },
+              {
+                "id": 56,
+                "name": "Max. Strap Length",
+                "value": 51
+              },
+              {
+                "id": 1,
+                "name": "Width",
+                "value": 24.5
+              }
+            ],
+            "standardSizeId": "__Bags",
+            "displaySize": "n/a",
+            "moreComingSoon": false,
+            "id": "809530-005"
+          }
+        ],
+        "designerShippingRestriction": false,
+        "categories": [
+          {
+            "id": 3,
+            "name": "Bags",
+            "urlKey": "Bags",
+            "children": [
+              {
+                "id": 11696,
+                "name": "Tote Bags",
+                "urlKey": "Tote_Bags",
+                "children": [
+                  {
+                    "id": 11705,
+                    "name": "Tote Bags",
+                    "urlKey": "Tote_Bags"
+                  },
+                  {
+                    "id": 11714,
+                    "name": "Shoulder Strap",
+                    "urlKey": "Shoulder_Strap"
+                  }
+                ]
+              },
+              {
+                "id": 19655,
+                "name": "Top Handle",
+                "urlKey": "Top_Handle",
+                "children": [
+                  {
+                    "id": 19673,
+                    "name": "Shoulder Bag",
+                    "urlKey": "Shoulder_Bag"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "keywords": [
+          "SICILY",
+          "gift",
+          "present",
+          "classic",
+          "ladylike",
+          "structured",
+          "shoulder"
+        ],
+        "videos": {
+          "urlTemplate": "{{scheme}}//video.net-a-porter.com/videos/productPage/809530_{{type}}.mp4",
+          "mediaType": "video/mp4",
+          "types": [
+            "detail"
+          ]
+        },
+        "colourIds": [
+          2
+        ],
+        "nonReturnable": false,
+        "images": {
+          "shots": [
+            "in",
+            "ou",
+            "bk",
+            "cu",
+            "e1",
+            "e2",
+            "e3"
+          ],
+          "sizes": [
+            "dl",
+            "l",
+            "m",
+            "m2",
+            "mt",
+            "mt2",
+            "pp",
+            "s",
+            "sl",
+            "xl",
+            "xs",
+            "xxl"
+          ],
+          "mediaType": "image/jpeg",
+          "infoUrlTemplate": "https://www.net-a-porter.com/gb/en/product/809530/",
+          "urlTemplate": "cache.net-a-porter.com/images/products/809530/809530_e3_dl.jpg"
+        },
+        "editorsComments": "Dolce & Gabbana's refined 'Sicily' tote pays homage to the brand's Italian roots. Crafted from textured-leather, this structured style has a leopard-print cotton lining and a small mirror for lipstick touch-ups. Attach the strap to carry it over your shoulder. <br><br>Shown here with: [Erdem Dress id799197], [Miu Miu Pumps id797944], [Erickson Beamon Earrings id820060], [Chan Luu Ring id821526], [IAM by Ileana Makri Ring id827193].",
+        "badges": [
+          "In_Stock"
+        ]
+      }
+    }
+  ]
+}
+
+// TODO::
+
+// FASHION ADVISOR
+
+// FAQ
+
+// 

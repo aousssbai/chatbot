@@ -1,0 +1,20 @@
+{ "intents": 
+   [ { "intent": "product_recommendation",
+       "confidence": 0.4041552760434157 } ],
+  "entities": 
+   [ 
+   	
+   	{ "entity": "product_category", "location": ["Object"], "value": "Shoes" },
+   	{ "entity": "product_category_type", "location": ["Object"], "value": "Boots" },
+
+   	{ "entity": "sys_currency", "location": ["Object"], "value": "100" },
+   	{ "entity": "product_size", "location": ["Object"], "value": "39" }
+   	 
+     
+     ]
+ }
+
+
+
+
+ 

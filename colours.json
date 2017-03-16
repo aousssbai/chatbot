@@ -1,0 +1,686 @@
+[
+  {
+    "colourFilterId": 0,
+    "colourNavigationId": 0,
+    "id": 0,
+    "name": "Unknown"
+  },
+  {
+    "colourFilterId": 1002,
+    "colourNavigationId": 1002,
+    "id": 1,
+    "name": "Beige"
+  },
+  {
+    "colourFilterId": 2,
+    "colourNavigationId": 2,
+    "id": 2,
+    "name": "Black"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 3,
+    "name": "Blue"
+  },
+  {
+    "colourFilterId": 104,
+    "colourNavigationId": 104,
+    "id": 4,
+    "name": "Brass"
+  },
+  {
+    "colourFilterId": 6,
+    "colourNavigationId": 6,
+    "id": 6,
+    "name": "Brown"
+  },
+  {
+    "colourFilterId": 7,
+    "colourNavigationId": 7,
+    "id": 7,
+    "name": "Burgundy"
+  },
+  {
+    "colourFilterId": 6,
+    "colourNavigationId": 6,
+    "id": 8,
+    "name": "Camel"
+  },
+  {
+    "colourFilterId": 7,
+    "colourNavigationId": 7,
+    "id": 9,
+    "name": "Claret"
+  },
+  {
+    "colourFilterId": 11,
+    "colourNavigationId": 43,
+    "id": 11,
+    "name": "Cream"
+  },
+  {
+    "colourFilterId": 6,
+    "colourNavigationId": 6,
+    "id": 13,
+    "name": "Dark brown"
+  },
+  {
+    "colourFilterId": 18,
+    "colourNavigationId": 18,
+    "id": 14,
+    "name": "Dark gray"
+  },
+  {
+    "colourFilterId": 15,
+    "colourNavigationId": 43,
+    "id": 15,
+    "name": "Ecru"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 16,
+    "name": "Emerald"
+  },
+  {
+    "colourFilterId": 17,
+    "colourNavigationId": 17,
+    "id": 17,
+    "name": "Gold"
+  },
+  {
+    "colourFilterId": 18,
+    "colourNavigationId": 18,
+    "id": 18,
+    "name": "Gray"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 19,
+    "name": "Green"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 20,
+    "name": "Indigo"
+  },
+  {
+    "colourFilterId": 21,
+    "colourNavigationId": 43,
+    "id": 21,
+    "name": "Ivory"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 22,
+    "name": "Army green"
+  },
+  {
+    "colourFilterId": 44,
+    "colourNavigationId": 44,
+    "id": 23,
+    "name": "Pastel yellow"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 24,
+    "name": "Light green"
+  },
+  {
+    "colourFilterId": 36,
+    "colourNavigationId": 36,
+    "id": 25,
+    "name": "Magenta"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 26,
+    "name": "Mint"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 29,
+    "name": "Navy"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 30,
+    "name": "Sage green"
+  },
+  {
+    "colourFilterId": 31,
+    "colourNavigationId": 31,
+    "id": 31,
+    "name": "Orange"
+  },
+  {
+    "colourFilterId": 31,
+    "colourNavigationId": 31,
+    "id": 32,
+    "name": "Peach"
+  },
+  {
+    "colourFilterId": 33,
+    "colourNavigationId": 33,
+    "id": 33,
+    "name": "Pink"
+  },
+  {
+    "colourFilterId": 69,
+    "colourNavigationId": 69,
+    "id": 35,
+    "name": "Platinum"
+  },
+  {
+    "colourFilterId": 36,
+    "colourNavigationId": 36,
+    "id": 36,
+    "name": "Purple"
+  },
+  {
+    "colourFilterId": 37,
+    "colourNavigationId": 37,
+    "id": 37,
+    "name": "Red"
+  },
+  {
+    "colourFilterId": 40,
+    "colourNavigationId": 40,
+    "id": 40,
+    "name": "Tortoiseshell"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 41,
+    "name": "Turquoise"
+  },
+  {
+    "colourFilterId": 43,
+    "colourNavigationId": 43,
+    "id": 43,
+    "name": "White"
+  },
+  {
+    "colourFilterId": 44,
+    "colourNavigationId": 44,
+    "id": 44,
+    "name": "Yellow"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 45,
+    "name": "Cobalt blue"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 46,
+    "name": "Bright blue"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 47,
+    "name": "Azure"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 48,
+    "name": "Light blue"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 49,
+    "name": "Sky blue"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 50,
+    "name": "Storm blue"
+  },
+  {
+    "colourFilterId": 6,
+    "colourNavigationId": 6,
+    "id": 51,
+    "name": "Light brown"
+  },
+  {
+    "colourFilterId": 1002,
+    "colourNavigationId": 1002,
+    "id": 52,
+    "name": "Sand"
+  },
+  {
+    "colourFilterId": 6,
+    "colourNavigationId": 6,
+    "id": 53,
+    "name": "Tan"
+  },
+  {
+    "colourFilterId": 6,
+    "colourNavigationId": 6,
+    "id": 54,
+    "name": "Taupe"
+  },
+  {
+    "colourFilterId": 18,
+    "colourNavigationId": 18,
+    "id": 57,
+    "name": "Anthracite"
+  },
+  {
+    "colourFilterId": 18,
+    "colourNavigationId": 18,
+    "id": 58,
+    "name": "Light gray"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 59,
+    "name": "Bright green"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 60,
+    "name": "Dark green"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 61,
+    "name": "Forest green"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 63,
+    "name": "Jade"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 64,
+    "name": "Petrol"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 65,
+    "name": "Teal"
+  },
+  {
+    "colourFilterId": 104,
+    "colourNavigationId": 104,
+    "id": 66,
+    "name": "Bronze"
+  },
+  {
+    "colourFilterId": 17,
+    "colourNavigationId": 17,
+    "id": 67,
+    "name": "Matte gold"
+  },
+  {
+    "colourFilterId": 17,
+    "colourNavigationId": 17,
+    "id": 68,
+    "name": "Shiny gold"
+  },
+  {
+    "colourFilterId": 69,
+    "colourNavigationId": 69,
+    "id": 69,
+    "name": "Silver"
+  },
+  {
+    "colourFilterId": 31,
+    "colourNavigationId": 31,
+    "id": 70,
+    "name": "Pastel orange"
+  },
+  {
+    "colourFilterId": 31,
+    "colourNavigationId": 31,
+    "id": 71,
+    "name": "Bright orange"
+  },
+  {
+    "colourFilterId": 33,
+    "colourNavigationId": 33,
+    "id": 72,
+    "name": "Blush"
+  },
+  {
+    "colourFilterId": 33,
+    "colourNavigationId": 33,
+    "id": 73,
+    "name": "Bright pink"
+  },
+  {
+    "colourFilterId": 36,
+    "colourNavigationId": 36,
+    "id": 74,
+    "name": "Grape"
+  },
+  {
+    "colourFilterId": 36,
+    "colourNavigationId": 36,
+    "id": 75,
+    "name": "Lavender"
+  },
+  {
+    "colourFilterId": 36,
+    "colourNavigationId": 36,
+    "id": 76,
+    "name": "Lilac"
+  },
+  {
+    "colourFilterId": 36,
+    "colourNavigationId": 36,
+    "id": 77,
+    "name": "Plum"
+  },
+  {
+    "colourFilterId": 37,
+    "colourNavigationId": 37,
+    "id": 78,
+    "name": "Tomato red"
+  },
+  {
+    "colourFilterId": 37,
+    "colourNavigationId": 37,
+    "id": 79,
+    "name": "Crimson"
+  },
+  {
+    "colourFilterId": 7,
+    "colourNavigationId": 7,
+    "id": 80,
+    "name": "Merlot"
+  },
+  {
+    "colourFilterId": 44,
+    "colourNavigationId": 44,
+    "id": 82,
+    "name": "Bright yellow"
+  },
+  {
+    "colourFilterId": 44,
+    "colourNavigationId": 44,
+    "id": 83,
+    "name": "Marigold"
+  },
+  {
+    "colourFilterId": 36,
+    "colourNavigationId": 36,
+    "id": 86,
+    "name": "Dark purple"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 87,
+    "name": "Leaf green"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 88,
+    "name": "Lime green"
+  },
+  {
+    "colourFilterId": 1002,
+    "colourNavigationId": 1002,
+    "id": 89,
+    "name": "Mushroom"
+  },
+  {
+    "colourFilterId": 31,
+    "colourNavigationId": 31,
+    "id": 90,
+    "name": "Coral"
+  },
+  {
+    "colourFilterId": 1001,
+    "colourNavigationId": 1001,
+    "id": 91,
+    "name": "Leopard print"
+  },
+  {
+    "colourFilterId": 33,
+    "colourNavigationId": 33,
+    "id": 92,
+    "name": "Antique rose"
+  },
+  {
+    "colourFilterId": 33,
+    "colourNavigationId": 33,
+    "id": 93,
+    "name": "Baby pink"
+  },
+  {
+    "colourFilterId": 37,
+    "colourNavigationId": 37,
+    "id": 94,
+    "name": "Brick"
+  },
+  {
+    "colourFilterId": 6,
+    "colourNavigationId": 6,
+    "id": 95,
+    "name": "Chocolate"
+  },
+  {
+    "colourFilterId": 1002,
+    "colourNavigationId": 1002,
+    "id": 96,
+    "name": "Clear"
+  },
+  {
+    "colourFilterId": 33,
+    "colourNavigationId": 33,
+    "id": 97,
+    "name": "Fuchsia"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 98,
+    "name": "Midnight blue"
+  },
+  {
+    "colourFilterId": 1002,
+    "colourNavigationId": 1002,
+    "id": 99,
+    "name": "Neutral"
+  },
+  {
+    "colourFilterId": 100,
+    "colourNavigationId": 43,
+    "id": 100,
+    "name": "Off-white"
+  },
+  {
+    "colourFilterId": 31,
+    "colourNavigationId": 31,
+    "id": 101,
+    "name": "Papaya"
+  },
+  {
+    "colourFilterId": 36,
+    "colourNavigationId": 36,
+    "id": 103,
+    "name": "Violet"
+  },
+  {
+    "colourFilterId": 104,
+    "colourNavigationId": 104,
+    "id": 104,
+    "name": "Metallic"
+  },
+  {
+    "colourFilterId": 104,
+    "colourNavigationId": 104,
+    "id": 105,
+    "name": "Copper"
+  },
+  {
+    "colourFilterId": 33,
+    "colourNavigationId": 33,
+    "id": 106,
+    "name": "Bubblegum"
+  },
+  {
+    "colourFilterId": 44,
+    "colourNavigationId": 44,
+    "id": 107,
+    "name": "Chartreuse"
+  },
+  {
+    "colourFilterId": 44,
+    "colourNavigationId": 44,
+    "id": 108,
+    "name": "Saffron"
+  },
+  {
+    "colourFilterId": 33,
+    "colourNavigationId": 33,
+    "id": 109,
+    "name": "Pastel pink"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 111,
+    "name": "Royal blue"
+  },
+  {
+    "colourFilterId": 19,
+    "colourNavigationId": 19,
+    "id": 113,
+    "name": "Gray green"
+  },
+  {
+    "colourFilterId": 18,
+    "colourNavigationId": 18,
+    "id": 114,
+    "name": "Stone"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 115,
+    "name": "Light denim"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 116,
+    "name": "Mid denim"
+  },
+  {
+    "colourFilterId": 3,
+    "colourNavigationId": 3,
+    "id": 117,
+    "name": "Dark denim"
+  },
+  {
+    "colourFilterId": 18,
+    "colourNavigationId": 18,
+    "id": 118,
+    "name": "Charcoal"
+  },
+  {
+    "colourFilterId": 1001,
+    "colourNavigationId": 1001,
+    "id": 124,
+    "name": "Snake print"
+  },
+  {
+    "colourFilterId": 1001,
+    "colourNavigationId": 1001,
+    "id": 125,
+    "name": "Zebra print"
+  },
+  {
+    "colourFilterId": 104,
+    "colourNavigationId": 104,
+    "id": 126,
+    "name": "Gunmetal"
+  },
+  {
+    "colourFilterId": 127,
+    "colourNavigationId": 127,
+    "id": 127,
+    "name": "Rose gold"
+  },
+  {
+    "colourFilterId": 44,
+    "colourNavigationId": 44,
+    "id": 128,
+    "name": "Mustard"
+  },
+  {
+    "colourFilterId": 130,
+    "colourNavigationId": 130,
+    "id": 129,
+    "name": "No colour"
+  },
+  {
+    "colourFilterId": 130,
+    "colourNavigationId": 130,
+    "id": 130,
+    "name": "Colorless"
+  },
+  {
+    "colourFilterId": 131,
+    "colourNavigationId": 131,
+    "id": 131,
+    "name": "Multi"
+  },
+  {
+    "colourFilterId": 130,
+    "colourNavigationId": 130,
+    "id": 132,
+    "name": "No color"
+  },
+  {
+    "colourFilterId": 1001,
+    "colourNavigationId": 1001,
+    "id": 1001,
+    "name": "Animal print"
+  },
+  {
+    "colourFilterId": 1002,
+    "colourNavigationId": 1002,
+    "id": 1002,
+    "name": "Neutrals"
+  },
+  {
+    "colourFilterId": 1002,
+    "colourNavigationId": 1002,
+    "id": 1003,
+    "name": "Nude"
+  },
+  {
+    "colourFilterId": 133,
+    "colourNavigationId": 133,
+    "id": 133,
+    "name": "White gold"
+  }
+]

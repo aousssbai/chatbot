@@ -1,0 +1,293 @@
+{
+  "standardSizeSchemes": [
+    {
+      "id": "Clothing",
+      "sizes": [
+        {
+          "id": "00001_XXXS_Clothing",
+          "name": "XXXS"
+        },
+        {
+          "id": "00002_XXS_Clothing",
+          "name": "XXS"
+        },
+        {
+          "id": "00003_XS_Clothing",
+          "name": "XS"
+        },
+        {
+          "id": "00004_S_Clothing",
+          "name": "S"
+        },
+        {
+          "id": "00005_M_Clothing",
+          "name": "M"
+        },
+        {
+          "id": "00006_L_Clothing",
+          "name": "L"
+        },
+        {
+          "id": "00007_XL_Clothing",
+          "name": "XL"
+        },
+        {
+          "id": "00008_XXL_Clothing",
+          "name": "XXL"
+        },
+        {
+          "id": "00009_XXXL_Clothing",
+          "name": "XXXL"
+        }
+      ]
+    },
+    {
+      "id": "Lingerie",
+      "sizes": [
+        {
+          "id": "00001_XXXS_Lingerie",
+          "name": "XXXS"
+        },
+        {
+          "id": "00002_XXS_Lingerie",
+          "name": "XXS"
+        },
+        {
+          "id": "00003_XS_Lingerie",
+          "name": "XS"
+        },
+        {
+          "id": "00004_S_Lingerie",
+          "name": "S"
+        },
+        {
+          "id": "00005_M_Lingerie",
+          "name": "M"
+        },
+        {
+          "id": "00005_36_Lingerie",
+          "name": "36"
+        },
+        {
+          "id": "00006_L_Lingerie",
+          "name": "L"
+        },
+        {
+          "id": "00007_XL_Lingerie",
+          "name": "XL"
+        },
+        {
+          "id": "00007_37_Lingerie",
+          "name": "37"
+        },
+        {
+          "id": "00008_XXL_Lingerie",
+          "name": "XXL"
+        },
+        {
+          "id": "00009_XXXL_Lingerie",
+          "name": "XXXL"
+        },
+        {
+          "id": "00011_39_Lingerie",
+          "name": "39"
+        }
+      ]
+    },
+    {
+      "id": "Accessories",
+      "sizes": [
+        {
+          "id": "00002_XXS_Accessories",
+          "name": "XXS"
+        },
+        {
+          "id": "00003_XS_Accessories",
+          "name": "XS"
+        },
+        {
+          "id": "00004_S_Accessories",
+          "name": "S"
+        },
+        {
+          "id": "00005_M_Accessories",
+          "name": "M"
+        },
+        {
+          "id": "00006_L_Accessories",
+          "name": "L"
+        },
+        {
+          "id": "00007_XL_Accessories",
+          "name": "XL"
+        },
+        {
+          "id": "00008_XXL_Accessories",
+          "name": "XXL"
+        }
+      ]
+    },
+    {
+      "id": "Sport",
+      "sizes": [
+        {
+          "id": "00001_XXXS_Sport",
+          "name": "XXXS"
+        },
+        {
+          "id": "00002_XXS_Sport",
+          "name": "XXS"
+        },
+        {
+          "id": "00003_XS_Sport",
+          "name": "XS"
+        },
+        {
+          "id": "00003_35_Sport",
+          "name": "35"
+        },
+        {
+          "id": "00004_S_Sport",
+          "name": "S"
+        },
+        {
+          "id": "00004_35.5_Sport",
+          "name": "35.5"
+        },
+        {
+          "id": "00005_M_Sport",
+          "name": "M"
+        },
+        {
+          "id": "00005_36_Sport",
+          "name": "36"
+        },
+        {
+          "id": "00006_L_Sport",
+          "name": "L"
+        },
+        {
+          "id": "00006_36.5_Sport",
+          "name": "36.5"
+        },
+        {
+          "id": "00007_XL_Sport",
+          "name": "XL"
+        },
+        {
+          "id": "00007_37_Sport",
+          "name": "37"
+        },
+        {
+          "id": "00008_37.5_Sport",
+          "name": "37.5"
+        },
+        {
+          "id": "00008_XXL_Sport",
+          "name": "XXL"
+        },
+        {
+          "id": "00009_38_Sport",
+          "name": "38"
+        },
+        {
+          "id": "00010_38.5_Sport",
+          "name": "38.5"
+        },
+        {
+          "id": "00011_39_Sport",
+          "name": "39"
+        },
+        {
+          "id": "00012_39.5_Sport",
+          "name": "39.5"
+        },
+        {
+          "id": "00013_40_Sport",
+          "name": "40"
+        },
+        {
+          "id": "00014_40.5_Sport",
+          "name": "40.5"
+        },
+        {
+          "id": "00015_41_Sport",
+          "name": "41"
+        }
+      ]
+    },
+    {
+      "id": "Shoes",
+      "sizes": [
+        {
+          "id": "00001_34_Shoes",
+          "name": "34"
+        },
+        {
+          "id": "00002_34.5_Shoes",
+          "name": "34.5"
+        },
+        {
+          "id": "00003_35_Shoes",
+          "name": "35"
+        },
+        {
+          "id": "00004_35.5_Shoes",
+          "name": "35.5"
+        },
+        {
+          "id": "00005_36_Shoes",
+          "name": "36"
+        },
+        {
+          "id": "00006_36.5_Shoes",
+          "name": "36.5"
+        },
+        {
+          "id": "00007_37_Shoes",
+          "name": "37"
+        },
+        {
+          "id": "00008_37.5_Shoes",
+          "name": "37.5"
+        },
+        {
+          "id": "00009_38_Shoes",
+          "name": "38"
+        },
+        {
+          "id": "00010_38.5_Shoes",
+          "name": "38.5"
+        },
+        {
+          "id": "00011_39_Shoes",
+          "name": "39"
+        },
+        {
+          "id": "00012_39.5_Shoes",
+          "name": "39.5"
+        },
+        {
+          "id": "00013_40_Shoes",
+          "name": "40"
+        },
+        {
+          "id": "00014_40.5_Shoes",
+          "name": "40.5"
+        },
+        {
+          "id": "00015_41_Shoes",
+          "name": "41"
+        },
+        {
+          "id": "00016_41.5_Shoes",
+          "name": "41.5"
+        },
+        {
+          "id": "00017_42_Shoes",
+          "name": "42"
+        }
+      ]
+    }
+  ]
+}
