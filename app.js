@@ -1,11 +1,10 @@
 
 
-
-
 //==============================Variable declarations===========================================
 var fs = require("fs");
-var JSONPath = require('JSONPath');
-var csv = require('csv-parser')
+var jsonfile = require('jsonfile')
+var Client = require('node-rest-client').Client;
+var client = new Client();
 var obj = JSON.parse(fs.readFileSync('demo.json', 'utf8'));
 var intents;
 var entities;
@@ -152,7 +151,7 @@ if (finalEntity=="brand")
 }
 
 //=================Check if prices need to be sorted===============================
-if (finalEntity == "sort")
+if (finalEntity == "product_sort")
 {
   sort = finalValue
 }
@@ -180,7 +179,7 @@ if (currencyCounter == 2)
 //================Get the ID of the colour==========================================     
 
 
-if (finalEntity=="colour")
+if (finalEntity=="product_colour")
 {
    var colourObj = JSON.parse(fs.readFileSync('colours.json', 'utf8'));
    for (var key in colourObj)
@@ -206,7 +205,7 @@ if (finalEntity=="colour")
    }
      ColourId = colourArr[0];
 
-    // console.log("The colour id is "+ColourId+"\n");  
+     console.log("The colour id is "+ColourId+"\n");  
 
 }
 
@@ -1756,7 +1755,7 @@ for (var i=0; i<7; i++)
 
 //==========================Craft the Url used in the API call==================================
 
-var url ="http://api.net-a-porter.com:80/NAP/GB/60/0/pids?";
+var url ="http://api.net-a-porter.com:80/NAP/GB/300/0/pids?";
 for (var i=0; i<urlArrFinal.length; i++)
 {
   if (i==0)
@@ -1774,16 +1773,46 @@ console.log("\n"+"■━━━━━■");
 console.log("Results")
 console.log("■━━━━━■"+"\n");
 
-var urlCall = url;  
-var result;                                   
-request(url, function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-     
-     console.log(body);
-
-  }
+var file = 'resultPids.json';
+  fs.truncate(file,0, function(err) {
+  
 })
 
+var urlCall = url;  
+               
+client.get(url, function (data, response) { 
+var list = data.pids;
+console.log("the number of results is: "+list.length);
+if (list.length==0)
+{
+  var file = 'resultPids.json';
+  jsonfile.writeFileSync(file, {},{flag: 'a'}, function(err) {
+});
+
+}
+else 
+{
+var limit =10;
+
+for (var i=0; i<limit; i++)
+{
+
+var infoUrl = "http://api.net-a-porter.com:80/NAP/GB/en/summarise/"+list[i];
+
+client.get(infoUrl, function (data, response) { 
+
+  var file = 'resultPids.json';
+  jsonfile.writeFileSync(file, data,{flag: 'a'}, function(err) {
+  
+})
+
+})
+
+
+}
+}
+   
+});
 
 
 
@@ -1792,5 +1821,7 @@ request(url, function (error, response, body) {
 
 
 
+   
+   
    
    
