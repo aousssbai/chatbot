@@ -1,4 +1,7 @@
 
+function Parser()
+{
+
 
 //==============================Variable declarations===========================================
 var fs = require("fs");
@@ -26,6 +29,9 @@ var currencyCounter=0;
 var urlArr=[];
 var urlArrValue=[];
 var urlArrFinal=[];
+var urlViewValue=[];
+var urlView = [];
+var urlViewFinal = [];
 
 var fatherCategory;
 var request = require('request');
@@ -122,6 +128,7 @@ for (var i=1; i<listFinal.length+1; i++)
 
 if (finalEntity=="brand")
 {
+  var brandName = finalValue;
    var brandObj = JSON.parse(fs.readFileSync('brands.json', 'utf8'));
    for (var key in brandObj)
    {
@@ -181,6 +188,7 @@ if (currencyCounter == 2)
 
 if (finalEntity=="product_colour")
 {
+  var colourName = finalValue;
    var colourObj = JSON.parse(fs.readFileSync('colours.json', 'utf8'));
    for (var key in colourObj)
    {
@@ -213,6 +221,7 @@ if (finalEntity=="product_colour")
   
 if (finalEntity=="product_category") 
 {
+  var categoryName = finalValue;
   var categObj = JSON.parse(fs.readFileSync('categories.json', 'utf8'));
    for (var key in categObj)
    {
@@ -247,6 +256,7 @@ if (finalEntity=="product_category")
 
 if (finalEntity=="product_category_type") 
 {
+  var category_typeName = finalValue;
   var categObj = JSON.parse(fs.readFileSync('categories.json', 'utf8'));
 
    for (var key in categObj)
@@ -308,6 +318,7 @@ if (finalEntity=="product_category_type")
 
 if (finalEntity=="product_category_type_specific") 
 {
+  var category_type_specificName = finalValue;
   var categObj = JSON.parse(fs.readFileSync('categories.json', 'utf8'));
    for (var key in categObj)
    {
@@ -1753,6 +1764,36 @@ for (var i=0; i<7; i++)
   }
 }
 
+
+
+
+
+
+
+urlView[0]=category_type_specificName;
+urlView[1]="designerfilter";
+urlView[2]="colourfilter";
+urlView[3]="sizefilter";
+urlView[4]="sortorder";
+
+
+urlViewValue[0]=category_type_specificName;
+urlViewValue[1]=BrandId;
+urlViewValue[2]=ColourId;
+urlViewValue[3]=size;
+urlViewValue[4]=sort;
+
+for (var i=0; i<5; i++)
+{
+  if (urlViewValue[i])
+  {
+     urlViewFinal.push(urlView[i], urlViewValue[i]);
+  }
+}
+
+
+
+
 //==========================Craft the Url used in the API call==================================
 
 var url ="http://api.net-a-porter.com:80/NAP/GB/300/0/pids?";
@@ -1767,13 +1808,67 @@ i=i+1;
 var url = url + "&visibility=visible"
 //console.log(url);
 
+//============================Craft the ViewAll url==============================================
+if (categoryId && category_typeId)
+{
+var view = "https://www.net-a-porter.com/gb/en/d/shop/"+categoryName+"/"+category_typeName+"?";
+}
+
+if (categoryId && !category_typeId)
+{
+var view = "https://www.net-a-porter.com/gb/en/d/shop/"+categoryName+"?";
+}
+
+if (!categoryId && category_typeId)
+{
+var view = "https://www.net-a-porter.com/gb/en/d/shop/"+category_typeName+"?";
+}
+
+if (!categoryId && !category_typeId)
+{
+var view = "https://www.net-a-porter.com/gb/en/d/shop?";
+}
+
+
+
+if (categoryId || category_typeId || category_type_specificId )
+{
+   for (var i=0; i<urlViewFinal.length; i++)
+   {
+    if (i==0)
+    {
+        var viewAllurl = view +urlViewFinal[i]+"="+urlViewFinal[i+1];
+    }
+
+    else 
+{var viewAllurl = view + "&"+urlViewFinal[i]+"="+urlViewFinal[i+1];}
+i=i+1;
+}
+
+   }
+
+else {
+
+
+if (ColourId && BrandId)
+{
+  viewAllurl = view+"Designers/"+brandName+"?colourFilter="+colourName;
+}
+
+
+
+
+}
+
+
+
 //=================================Execute API calls=======================
 
 console.log("\n"+"■━━━━━■");
 console.log("Results")
 console.log("■━━━━━■"+"\n");
 
-var file = 'resultPids.json';
+var file = 'finalResult.json';
   fs.truncate(file,0, function(err) {
   
 })
@@ -1782,17 +1877,37 @@ var urlCall = url;
                
 client.get(url, function (data, response) { 
 var list = data.pids;
-console.log("the number of results is: "+list.length);
+//console.log("the number of results is: "+list.length);
+//=========================If the answer s empty======================
 if (list.length==0)
 {
-  var file = 'resultPids.json';
-  jsonfile.writeFileSync(file, {},{flag: 'a'}, function(err) {
+  var obj = {
+  
+
+  "viewAllurl": {
+    "url": ""
+  },
+
+  "products": []
+}
+  var file = 'finalResult.json';
+  jsonfile.writeFileSync(file, obj,{flag: 'a'}, function(err) {
 });
 
 }
+//=======================otherwise============================================
 else 
 {
 var limit =10;
+var obj = {
+  
+
+  "viewAllurl": {
+    "url": ""
+  },
+
+  "products": []
+}
 
 for (var i=0; i<limit; i++)
 {
@@ -1801,27 +1916,40 @@ var infoUrl = "http://api.net-a-porter.com:80/NAP/GB/en/summarise/"+list[i];
 
 client.get(infoUrl, function (data, response) { 
 
-  var file = 'resultPids.json';
-  jsonfile.writeFileSync(file, data,{flag: 'a'}, function(err) {
+  
+
+  obj.viewAllurl.url = viewAllurl;
+ var pictureUrl = "cache.net-a-porter.com/images/products/"+ data.id+"/"+data.id +"_e3_dl.jpg";
+  data.images.urlTemplate = pictureUrl;
+  var a =1;
+  i=i-a;
+  a=a-1;
+  obj.products[9-i]= data;
+  file = 'finalResult.json';
+  jsonfile.writeFileSync(file, obj, function(err) {
+});
+  
+
+
   
 })
 
-})
-
+}
+//end for
 
 }
-}
-   
+//end else
+  
+
+
 });
 
-
+  var RESULT = fs.readFileSync("finalResult.json").toString();
 
 
 	
+return RESULT;
+}
 
 
-
-   
-   
-   
    
