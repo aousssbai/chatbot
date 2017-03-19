@@ -1,4 +1,3 @@
-
 function Parser()
 {
 
@@ -213,7 +212,7 @@ if (finalEntity=="product_colour")
    }
      ColourId = colourArr[0];
 
-     console.log("The colour id is "+ColourId+"\n");  
+     //console.log("The colour id is "+ColourId+"\n");  
 
 }
 
@@ -350,7 +349,7 @@ if (finalEntity=="product_category_type_specific")
                                      {
 
                                       var category_type_specificId = categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey][sixthKey];
-                                         //console.log("the id of the specific category is "+ category_type_specificId+"\n");
+                                        // console.log("the id of the specific category is "+ category_type_specificId+"\n");
                                      }
 
                                   }
@@ -427,19 +426,19 @@ if ( categoryId && category_typeId && !category_type_specificId)
 
      if (counter == 1)
      {
-      finalCategoryId = category_typeId;
+      finalCategoryId = categoryId;
       finalLayer = 2;
       
      }
      
      else {
-      finalCategoryId = categoryId;
+      finalCategoryId = category_typeId;
        finalLayer = 1;
       
 
 
      };
-    // console.log("the final id of the category is "+ finalCategoryId+"\n");
+     //console.log("the final id of the category is "+ finalCategoryId+"\n");
 }
 //============================================================================
 
@@ -447,7 +446,7 @@ if ( categoryId && category_typeId && !category_type_specificId)
 else if (category_type_specificId && categoryId && !category_typeId)
 { 
   var counter=0;
-
+  
    var categObj = JSON.parse(fs.readFileSync('categories.json', 'utf8'));
 
    for (var key in categObj)
@@ -505,12 +504,12 @@ else if (category_type_specificId && categoryId && !category_typeId)
      if (counter == 1)
      {
       finalCategoryId = category_type_specificId;
-       finalLayer = 3;
+       finalLayer = 1;
       
 
      }
      
-     else {finalCategoryId == categoryId;
+     else {finalCategoryId = categoryId;
        finalLayer = 1;
  
      //console.log("the final id of the category is "+ finalCategoryId+"\n");
@@ -584,13 +583,13 @@ else if (category_typeId && category_type_specificId && !categoryId)
 
   if (counter == 1)
      {
-      finalCategoryId = category_type_specificId;
-      finalLayer = 3;
+      finalCategoryId = category_typeId;
+      finalLayer = 2;
      
      }
      
-     else {finalCategoryId == category_typeId;
-      finalLayer = 2;
+     else {finalCategoryId = category_type_specificId;
+      finalLayer = 3;
       
      
    }
@@ -767,31 +766,31 @@ for (var key in categObj)
 
    if (counter1 == 1 && counter2 == 1)
      {
-      finalCategoryId = category_type_specificId;
+      finalCategoryId = categoryId;
        finalLayer = 3;
       
-     // console.log("the final id of the category is "+ finalCategoryId+"\n");
+      //console.log("the final id of the category is "+ finalCategoryId+"\n");
      }
 
      else if (counter2 == 1)
      {
-         finalCategoryId = category_type_specificId;
-          finalLayer = 3;
+         finalCategoryId = category_typeId;
+          finalLayer = 2;
       
-        // console.log("the final id of the category is "+ finalCategoryId+"\n");
+         //console.log("the final id of the category is "+ finalCategoryId+"\n");
      }
 
      else if (counter3 == 1)
      {
-           finalCategoryId == category_typeId
-            finalLayer = 2;
+           finalCategoryId = categoryId
+            finalLayer = 1;
       
           // console.log("the final id of the category is "+ finalCategoryId+"\n");
 
      }
      
-     else {finalCategoryId == categoryId;
-       finalLayer = 1;
+     else {finalCategoryId = category_type_specificId;
+       finalLayer = 3;
       
      //console.log("the final id of the category is "+ finalCategoryId+"\n");
    };
@@ -1770,7 +1769,7 @@ for (var i=0; i<7; i++)
 
 
 
-urlView[0]=category_type_specificName;
+urlView[0]="navlevel3";
 urlView[1]="designerfilter";
 urlView[2]="colourfilter";
 urlView[3]="sizefilter";
@@ -1819,10 +1818,7 @@ if (categoryId && !category_typeId)
 var view = "https://www.net-a-porter.com/gb/en/d/shop/"+categoryName+"?";
 }
 
-if (!categoryId && category_typeId)
-{
-var view = "https://www.net-a-porter.com/gb/en/d/shop/"+category_typeName+"?";
-}
+
 
 if (!categoryId && !category_typeId)
 {
@@ -1852,6 +1848,7 @@ else {
 
 if (ColourId && BrandId)
 {
+  var view = "https://www.net-a-porter.com/gb/en/Shop/";
   viewAllurl = view+"Designers/"+brandName+"?colourFilter="+colourName;
 }
 
@@ -1859,6 +1856,8 @@ if (ColourId && BrandId)
 
 
 }
+
+console.log(viewAllurl);
 
 
 
@@ -1877,7 +1876,7 @@ var urlCall = url;
                
 client.get(url, function (data, response) { 
 var list = data.pids;
-//console.log("the number of results is: "+list.length);
+console.log("the number of results is: "+list.length);
 //=========================If the answer s empty======================
 if (list.length==0)
 {
@@ -1952,4 +1951,6 @@ return RESULT;
 }
 
 
+
+   Parser();
    
