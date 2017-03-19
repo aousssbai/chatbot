@@ -1,3 +1,4 @@
+
 function Parser()
 {
 
@@ -349,7 +350,7 @@ if (finalEntity=="product_category_type_specific")
                                      {
 
                                       var category_type_specificId = categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey][sixthKey];
-                                        // console.log("the id of the specific category is "+ category_type_specificId+"\n");
+                                        //console.log("the id of the specific category is "+ category_type_specificId+"\n");
                                      }
 
                                   }
@@ -503,7 +504,7 @@ else if (category_type_specificId && categoryId && !category_typeId)
 
      if (counter == 1)
      {
-      finalCategoryId = category_type_specificId;
+      finalCategoryId = categoryId;
        finalLayer = 1;
       
 
@@ -767,7 +768,7 @@ for (var key in categObj)
    if (counter1 == 1 && counter2 == 1)
      {
       finalCategoryId = categoryId;
-       finalLayer = 3;
+       finalLayer = 1;
       
       //console.log("the final id of the category is "+ finalCategoryId+"\n");
      }
@@ -830,6 +831,10 @@ else if (category_type_specificId && !category_typeId && !categoryId)
   
 }
 
+else {};
+
+//======================================Define the father category==========================
+
 
 
 
@@ -860,7 +865,7 @@ var categObj = JSON.parse(fs.readFileSync('categories.json', 'utf8'));
                                if (secondKey == "name")
                                {
                                 var finalName = categObj[key][innerKey][secondKey];
-                               // console.log("the final Category name is  "+ finalName+"\n");
+                                //console.log("the final Category name is  "+ finalName+"\n");
                                }
                             }
                   }
@@ -966,7 +971,7 @@ var categObj = JSON.parse(fs.readFileSync('categories.json', 'utf8'));
                                      {
 
                                       var finalName = categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey][sixthKey];
-                                         //console.log("the final Category name is  "+ finalName+"\n");
+                                        // console.log("the final Category name is  "+ finalName+"\n");
                                      }
 
                                   }
@@ -1786,9 +1791,11 @@ for (var i=0; i<5; i++)
 {
   if (urlViewValue[i])
   {
+
      urlViewFinal.push(urlView[i], urlViewValue[i]);
   }
 }
+
 
 
 
@@ -1807,7 +1814,295 @@ i=i+1;
 var url = url + "&visibility=visible"
 //console.log(url);
 
+//===================================find the father category==========================================
+//console.log("the final layer is "+finalLayer);
+
+
+
+if (finalLayer ==1)
+{
+   var fatherCategoryUrl = categoryName;
+   console.log("the father category is "+fatherCategoryUrl);
+}
+
+if (finalLayer==2)
+{
+   var compteur =0;
+
+  for (var i=0;i<clothing.length; i++)
+  {
+    if (category_typeName == clothing[i])
+    {
+      fatherCategoryUrl = "Clothing";
+      compteur = compteur +1; 
+    }
+  }
+
+
+if (compteur==0)
+{
+  for (var i=0;i<shoes.length; i++)
+  {
+    if (category_typeName == shoes[i])
+    {
+      fatherCategoryUrl = "Shoes";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+  for (var i=0;i<bags.length; i++)
+  {
+    if (category_typeName == bags[i])
+    {
+      fatherCategoryUrl = "Bags";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+  for (var i=0;i<accessories.length; i++)
+  {
+    if (category_typeName == accessories[i])
+    {
+      fatherCategoryUrl = "Accessories";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+
+  for (var i=0;i<lingerie.length; i++)
+  {
+    if (category_typeName == lingerie[i])
+    {
+      fatherCategoryUrl = "Lingerie";
+      compteur = compteur +1;
+    }
+  }
+
+}
+
+if (compteur==0)
+{
+
+  for (var i=0;i<beauty.length; i++)
+  {
+    if (category_typeName == beauty[i])
+    {
+      fatherCategoryUrl = "Beauty";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+
+  for (var i=0;i<sport.length; i++)
+  {
+    if (category_typeName == sport[i])
+    {
+      fatherCategoryUrl = "Sport";
+      compteur = compteur +1;
+    }
+  }
+
+}
+
+if (compteur==0)
+{
+
+for (var i=0;i<vacationShop.length; i++)
+  {
+    if (category_typeName == vacationShop[i])
+    {
+      fatherCategoryUrl = "Vacation Shop";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+
+
+for (var i=0;i<whatToWear.length; i++)
+  {
+    if (category_typeName == whatToWear[i])
+    {
+      fatherCategoryUrl = "What to Wear";
+      compteur = compteur +1;
+    }
+  }
+
+}
+
+
+if (compteur==0)
+{
+
+for (var i=0;i<winterShop.length; i++)
+  {
+    if (category_typeName == winterShop[i])
+    {
+      fatherCategoryUrl = "Winter Shop";
+      compteur = compteur +1;
+    }
+  }
+}
+
+console.log("the father category is "+fatherCategoryUrl);
+
+}
+
+if (finalLayer ==3)
+{
+  var compteur =0;
+
+  for (var i=0;i<clothing.length; i++)
+  {
+    if (category_type_specificName == clothing[i])
+    {
+      fatherCategoryUrl = "Clothing";
+      compteur = compteur +1; 
+    }
+  }
+
+
+if (compteur==0)
+{
+  for (var i=0;i<shoes.length; i++)
+  {
+    if (category_type_specificName == shoes[i])
+    {
+      fatherCategoryUrl = "Shoes";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+  for (var i=0;i<bags.length; i++)
+  {
+    if (category_type_specificName == bags[i])
+    {
+      fatherCategoryUrl = "Bags";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+  for (var i=0;i<accessories.length; i++)
+  {
+    if (category_type_specificName == accessories[i])
+    {
+      fatherCategoryUrl = "Accessories";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+
+  for (var i=0;i<lingerie.length; i++)
+  {
+    if (category_type_specificName == lingerie[i])
+    {
+      fatherCategoryUrl = "Lingerie";
+      compteur = compteur +1;
+    }
+  }
+
+}
+
+if (compteur==0)
+{
+
+  for (var i=0;i<beauty.length; i++)
+  {
+    if (category_type_specificName == beauty[i])
+    {
+      fatherCategoryUrl = "Beauty";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+
+  for (var i=0;i<sport.length; i++)
+  {
+    if (category_type_specificName == sport[i])
+    {
+      fatherCategoryUrl = "Sport";
+      compteur = compteur +1;
+    }
+  }
+
+}
+
+if (compteur==0)
+{
+
+for (var i=0;i<vacationShop.length; i++)
+  {
+    if (category_type_specificName == vacationShop[i])
+    {
+      fatherCategoryUrl = "Vacation Shop";
+      compteur = compteur +1;
+    }
+  }
+}
+
+if (compteur==0)
+{
+
+
+for (var i=0;i<whatToWear.length; i++)
+  {
+    if (category_type_specificName == whatToWear[i])
+    {
+      fatherCategoryUrl = "What to Wear";
+      compteur = compteur +1;
+    }
+  }
+
+}
+
+
+if (compteur==0)
+{
+
+for (var i=0;i<winterShop.length; i++)
+  {
+    if (category_type_specificName == winterShop[i])
+    {
+      fatherCategoryUrl = "Winter Shop";
+      compteur = compteur +1;
+    }
+  }
+}
+
+console.log("the father category is "+fatherCategoryUrl);
+
+}
+
 //============================Craft the ViewAll url==============================================
+
+var viewAllurl = "";
+
 if (categoryId && category_typeId)
 {
 var view = "https://www.net-a-porter.com/gb/en/d/shop/"+categoryName+"/"+category_typeName+"?";
@@ -1818,7 +2113,10 @@ if (categoryId && !category_typeId)
 var view = "https://www.net-a-porter.com/gb/en/d/shop/"+categoryName+"?";
 }
 
-
+if (!categoryId && category_typeId)
+{
+  var view = "https://www.net-a-porter.com/gb/en/d/shop/"+fatherCategoryUrl+"/"+category_typeName+"?";
+}
 
 if (!categoryId && !category_typeId)
 {
@@ -1833,13 +2131,18 @@ if (categoryId || category_typeId || category_type_specificId )
    {
     if (i==0)
     {
-        var viewAllurl = view +urlViewFinal[i]+"="+urlViewFinal[i+1];
+
+         view = view +urlViewFinal[0]+"="+urlViewFinal[1];
+         viewAllurl = view
+        
     }
 
-    else 
-{var viewAllurl = view + "&"+urlViewFinal[i]+"="+urlViewFinal[i+1];}
-i=i+1;
+   
+         viewAllurl = viewAllurl + "&"+urlViewFinal[i]+"="+urlViewFinal[i+1];
+      
+   i=i+1;
 }
+
 
    }
 
@@ -1857,7 +2160,7 @@ if (ColourId && BrandId)
 
 }
 
-console.log(viewAllurl);
+//console.log(viewAllurl);
 
 
 
@@ -1897,7 +2200,15 @@ if (list.length==0)
 //=======================otherwise============================================
 else 
 {
-var limit =10;
+
+  if (list.length <10)
+{
+  var limit =list.length;
+}
+else 
+{
+  var limit =10;
+}
 var obj = {
   
 
@@ -1918,8 +2229,9 @@ client.get(infoUrl, function (data, response) {
   
 
   obj.viewAllurl.url = viewAllurl;
- var pictureUrl = "cache.net-a-porter.com/images/products/"+ data.id+"/"+data.id +"_e3_dl.jpg";
+ var pictureUrl = "cache.net-a-porter.com/images/products/"+ data.id+"/"+data.id +"_in_l.jpg";
   data.images.urlTemplate = pictureUrl;
+  
   var a =1;
   i=i-a;
   a=a-1;
