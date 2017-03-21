@@ -446,7 +446,6 @@ function Parser() {
 
             if (counter == 1) {
 
-
                 finalCategoryId = category_type_specificId;
                 finalLayer = 3;
                 finalUrlKey = urlKey3;
@@ -454,6 +453,7 @@ function Parser() {
 
 
             } else {
+
                 finalCategoryId = categoryId;
                 finalLayer = 1;
                 finalUrlKey = urlKey1;
@@ -465,6 +465,7 @@ function Parser() {
         //======================================================================================
         else if (category_typeId && category_type_specificId && !categoryId) {
             var counter = 0;
+
 
             var categObj = JSON.parse(fs.readFileSync('categories.json', 'utf8'));
 
@@ -516,13 +517,15 @@ function Parser() {
 
             if (counter == 1) {
                 finalCategoryId = category_type_specificId;
+
                 finalLayer = 3;
                 finalUrlKey = urlKey3;
 
             } else {
-                finalCategoryId = category_type_specificId;
-                finalLayer = 3;
-                finalUrlKey = urlKey3;
+                finalCategoryId = category_typeId;
+
+                finalLayer = 2;
+                finalUrlKey = urlKey2;
 
 
             }
@@ -1018,6 +1021,8 @@ function Parser() {
     }
 
 
+
+
     urlView[0] = "navlevel3";
     urlView[1] = "designerfilter";
     urlView[2] = "colourfilter";
@@ -1065,15 +1070,16 @@ function Parser() {
 
 
 
-    if (category_type_specificId) {
+    if (finalCategoryId == category_type_specificId) {
         var view = "https://www.net-a-porter.com/gb/en/d/shop/" + urlKeyFirstFather + "/" + urlKeySecondFather + "?";
     }
 
-    if (category_typeId && !category_type_specificId) {
+    if (finalCategoryId == category_typeId) {
         var view = "https://www.net-a-porter.com/gb/en/d/shop/" + fatherCategoryUrl + "/" + urlKey2 + "?";
     }
 
-    if (categoryId && !category_typeId && !category_type_specificId) {
+    if (finalCategoryId == categoryId) {
+
         var view = "https://www.net-a-porter.com/gb/en/d/shop/" + finalUrlKey + "?";
 
     }
