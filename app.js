@@ -1661,7 +1661,7 @@ else if (category_type_specificId && categoryId && !category_typeId)
 
      if (counter == 1)
      {
-      finalCategoryId = categoryId;
+      finalCategoryId = category_type_specificId;
        finalLayer = 1;
       
 
@@ -1741,7 +1741,7 @@ else if (category_typeId && category_type_specificId && !categoryId)
 
   if (counter == 1)
      {
-      finalCategoryId = category_typeId;
+      finalCategoryId = category_type_specificId;
       finalLayer = 2;
      
      }
@@ -1924,7 +1924,7 @@ for (var key in categObj)
 
    if (counter1 == 1 && counter2 == 1)
      {
-      finalCategoryId = categoryId;
+      finalCategoryId = category_type_specificId;
        finalLayer = 1;
       
       //console.log("the final id of the category is "+ finalCategoryId+"\n");
@@ -1932,7 +1932,7 @@ for (var key in categObj)
 
      else if (counter2 == 1)
      {
-         finalCategoryId = category_typeId;
+         finalCategoryId = category_type_specificId;
           finalLayer = 2;
       
          //console.log("the final id of the category is "+ finalCategoryId+"\n");
@@ -1940,14 +1940,14 @@ for (var key in categObj)
 
      else if (counter3 == 1)
      {
-           finalCategoryId = categoryId
+           finalCategoryId = category_type_specificId
             finalLayer = 1;
       
           // console.log("the final id of the category is "+ finalCategoryId+"\n");
 
      }
      
-     else {finalCategoryId = categoryId;
+     else {finalCategoryId = category_type_specificId;
        finalLayer = 3;
       
      //console.log("the final id of the category is "+ finalCategoryId+"\n");
