@@ -583,17 +583,7 @@ var vacationShop = ["Vacation Shop",
 
 
 //=========================================================================================================================================================================================================================================================================================================================================================
-var beachwear1 =["Beachwear","One-Piece,One Piece","Bikinis","Bikini Tops","Bikini Bottoms","Bikini Sets","Coverups","Beach Dresses","Kaftans and Sarongs"];
-var bridal1 =["Bridal","Dresses","Skirts","Tops"]; 
-var coats1=["Coats","Capes","Double Breasted","Down Coats","Fur and Shearling","Knee Length","Long","Parkas","Short","Trench Coats"];
-var denim1 =["Denim",
-"Dresses",
-"Jackets",
-"Jumpsuits",
-"Pants",
-"Shorts",
-"Skirts",
-"Tops"];
+
 
 var dresses1 = ["Dresses",
 "Mini",
@@ -718,6 +708,17 @@ var tops1=["Tops",
 "Tanks and Camis",
 "Tunics"];
 
+var beachwear1 =["Beachwear","One-Piece,One Piece","Bikinis","Bikini Tops","Bikini Bottoms","Bikini Sets","Coverups","Beach Dresses","Kaftans and Sarongs"];
+var bridal1 =["Bridal","Dresses","Skirts","Tops"]; 
+var coats1=["Coats","Capes","Double Breasted","Down Coats","Fur and Shearling","Knee Length","Long","Parkas","Short","Trench Coats"];
+var denim1 =["Denim",
+"Dresses",
+"Jackets",
+"Jumpsuits",
+"Pants",
+"Shorts",
+"Skirts",
+"Tops"];
 
 var boots1 =["Boots",
 "Ankle Boots",
@@ -1589,7 +1590,7 @@ if ( categoryId && category_typeId && !category_type_specificId)
      }
      
      else {
-      finalCategoryId = category_typeId;
+      finalCategoryId = categoryId;
        finalLayer = 1;
       
 
@@ -1745,7 +1746,7 @@ else if (category_typeId && category_type_specificId && !categoryId)
      
      }
      
-     else {finalCategoryId = category_type_specificId;
+     else {finalCategoryId = category_typeId;
       finalLayer = 3;
       
      
@@ -1946,7 +1947,7 @@ for (var key in categObj)
 
      }
      
-     else {finalCategoryId = category_type_specificId;
+     else {finalCategoryId = categoryId;
        finalLayer = 3;
       
      //console.log("the final id of the category is "+ finalCategoryId+"\n");
@@ -1991,7 +1992,7 @@ else {};
 
 //======================================Define the father category==========================
 
-
+//console.log("the final category is "+finalCategoryId);
 
 
 
@@ -2425,7 +2426,7 @@ for (var i=0; i<urlArrFinal.length; i++)
 i=i+1;
 }
 var url = url + "&visibility=visible"
-//console.log(url);
+console.log(url);
 
 //===================================find the father category==========================================
 //console.log("the final layer is "+finalLayer);
@@ -2741,43 +2742,7 @@ if (fatherCategoryUrl=="Clothing")
   }
 
 
-if (compteur==0){
-  for (var i=0; i<bridal1.length; i++)
-  {
-    if (category_type_specificName==bridal1[i])
-    {
-       secondFather=bridal1[0];
-       compteur=compteur+1;
-    }
 
-  }
-}
-
-
-if (compteur==0){
-  for (var i=0; i<coats1.length; i++)
-  {
-    if (category_type_specificName==coats1[i])
-    {
-       secondFather=coats1[0];
-       compteur=compteur+1;
-    }
-
-  }
-  }
-
-
-if (compteur==0){
-  for (var i=0; i<denim1.length; i++)
-  {
-    if (category_type_specificName==denim1[i])
-    {
-       secondFather=denim1[0];
-       compteur=compteur+1;
-    }
-
-  }
-  }
 
 
 if (compteur==0){
@@ -2902,6 +2867,44 @@ if (compteur==0){
     if (category_type_specificName==suits1[i])
     {
        secondFather=suits1[0];
+       compteur=compteur+1;
+    }
+
+  }
+  }
+
+  if (compteur==0){
+  for (var i=0; i<bridal1.length; i++)
+  {
+    if (category_type_specificName==bridal1[i])
+    {
+       secondFather=bridal1[0];
+       compteur=compteur+1;
+    }
+
+  }
+}
+
+
+if (compteur==0){
+  for (var i=0; i<coats1.length; i++)
+  {
+    if (category_type_specificName==coats1[i])
+    {
+       secondFather=coats1[0];
+       compteur=compteur+1;
+    }
+
+  }
+  }
+
+
+if (compteur==0){
+  for (var i=0; i<denim1.length; i++)
+  {
+    if (category_type_specificName==denim1[i])
+    {
+       secondFather=denim1[0];
        compteur=compteur+1;
     }
 
