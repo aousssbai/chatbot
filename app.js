@@ -218,9 +218,8 @@ function Parser() {
                                     var categoryId = categObj[key][innerKey][secondKey];
                                     //console.log("The category id is "+categoryId+"\n");
                                 }
-                                if (secondKey=="urlKey")
-                                {
-                                	var urlKey1 = categObj[key][innerKey][secondKey];
+                                if (secondKey == "urlKey") {
+                                    var urlKey1 = categObj[key][innerKey][secondKey];
                                 }
                             }
                         }
@@ -262,10 +261,9 @@ function Parser() {
 
                                     }
 
-                                    if (fourthKey=="urlKey")
-                                {
-                                	var urlKey2 = categObj[key][innerKey][secondKey][thirdKey][fourthKey];
-                                }
+                                    if (fourthKey == "urlKey") {
+                                        var urlKey2 = categObj[key][innerKey][secondKey][thirdKey][fourthKey];
+                                    }
 
 
                                 }
@@ -317,10 +315,9 @@ function Parser() {
                                                     //console.log("the id of the specific category is "+ category_type_specificId+"\n");
                                                 }
 
-                                                if (sixthKey=="urlKey")
-					                                {
-					                                	var urlKey3 = categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey][sixthKey];
-					                                }
+                                                if (sixthKey == "urlKey") {
+                                                    var urlKey3 = categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey][sixthKey];
+                                                }
 
                                             }
                                         }
@@ -670,7 +667,7 @@ function Parser() {
 
 
             if (counter1 == 1 && counter2 == 1) {
-            	finalCategoryId = category_type_specificId;
+                finalCategoryId = category_type_specificId;
                 finalLayer = 3;
                 finalUrlKey = urlKey3;
 
@@ -862,11 +859,18 @@ function Parser() {
                         if (secondKey == "name") {
                             var categoryKey = categObj[key][innerKey][secondKey];
                             for (var secondKey in categObj[key][innerKey]) {
+                                if (secondKey == "urlKey") {
+                                    var loll1 = categObj[key][innerKey][secondKey];
+                                }
                                 for (var thirdKey in categObj[key][innerKey][secondKey]) {
                                     for (var fourthKey in categObj[key][innerKey][secondKey][thirdKey]) {
                                         if (fourthKey == "name") {
+
+
                                             if (categObj[key][innerKey][secondKey][thirdKey][fourthKey] == finalName) {
                                                 fatherCategoryUrl = categoryKey;
+
+
 
                                             }
                                         }
@@ -894,10 +898,9 @@ function Parser() {
                         if (secondKey == "name") {
                             var categoryKey = categObj[key][innerKey][secondKey];
                             for (var secondKey in categObj[key][innerKey]) {
-                            	if (secondKey=="urlKey")
-                            	{
-                            		var lol1 = categObj[key][innerKey][secondKey];
-                            	}
+                                if (secondKey == "urlKey") {
+                                    var lol1 = categObj[key][innerKey][secondKey];
+                                }
                                 for (var thirdKey in categObj[key][innerKey][secondKey]) {
                                     for (var fourthKey in categObj[key][innerKey][secondKey][thirdKey]) {
                                         if (fourthKey == "name") {
@@ -905,10 +908,9 @@ function Parser() {
 
                                         }
                                         for (var fourthKey in categObj[key][innerKey][secondKey][thirdKey]) {
-                                        	if (fourthKey=="urlKey")
-                                        	{
-                                        		var lol2 = categObj[key][innerKey][secondKey][thirdKey][fourthKey];
-                                        	}
+                                            if (fourthKey == "urlKey") {
+                                                var lol2 = categObj[key][innerKey][secondKey][thirdKey][fourthKey];
+                                            }
 
                                             for (var fifthKey in categObj[key][innerKey][secondKey][thirdKey][fourthKey]) {
                                                 for (var sixthKey in categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey]) {
@@ -916,20 +918,18 @@ function Parser() {
                                                         if (categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey][sixthKey] == finalName) {
                                                             fatherCategoryUrl = categoryKey;
                                                             secondFather = categoryTypeKey;
-                                                            urlKeyFirstFather=lol1;
-                                                            urlKeySecondFather=lol2;
+                                                            urlKeyFirstFather = lol1;
+                                                            urlKeySecondFather = lol2;
 
 
-                                                        
 
-                                                        for(var sixthKey in categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey])
-                                                        {
-                                                        	if (sixthKey=="urlKey")
-                                                        	{
-                                                                 urlKeyThirdFather = categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey][sixthKey];
-                                                        	}
+
+                                                            for (var sixthKey in categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey]) {
+                                                                if (sixthKey == "urlKey") {
+                                                                    urlKeyThirdFather = categObj[key][innerKey][secondKey][thirdKey][fourthKey][fifthKey][sixthKey];
+                                                                }
+                                                            }
                                                         }
-                                                    }
                                                     }
 
                                                 }
@@ -1032,7 +1032,7 @@ function Parser() {
         }
     }
 
-    
+
 
 
     urlView[0] = "navlevel3";
@@ -1080,17 +1080,17 @@ function Parser() {
 
     var viewAllurl = "";
 
+    console.log(urlKeyFirstFather);
 
-
-    if ( finalCategoryId==category_type_specificId) {
-        var view = "https://www.net-a-porter.com/gb/en/d/shop/" + urlKeyFirstFather + "/" + urlKeySecondFather + "?";
+    if (finalCategoryId == category_type_specificId) {
+        var view = "https://www.net-a-porter.com/gb/en/d/shop/" + fatherCategoryUrl + "/" + urlKeySecondFather + "?";
     }
 
-    if (finalCategoryId==category_typeId) {
+    if (finalCategoryId == category_typeId) {
         var view = "https://www.net-a-porter.com/gb/en/d/shop/" + fatherCategoryUrl + "/" + urlKey2 + "?";
     }
 
-    if (finalCategoryId==categoryId) {
+    if (finalCategoryId == categoryId) {
 
         var view = "https://www.net-a-porter.com/gb/en/d/shop/" + finalUrlKey + "?";
 
